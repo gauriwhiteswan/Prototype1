@@ -1,6 +1,6 @@
-from pep.enforcement import enforce_policy
-from tools.github import execute_github_tool
-from models import ToolRequest
+from .pep.enforcement import enforce_policy
+from .tools.github import execute_github_tool
+from .models import ToolRequest
 
 def handle_tool_request(request: ToolRequest):
     decision = enforce_policy(request)
