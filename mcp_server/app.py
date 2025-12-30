@@ -5,8 +5,8 @@ import os
 sys.path.append(os.path.dirname(__file__))
 
 from fastapi import FastAPI, HTTPException
-from tools.models import ToolRequest
-from tools.main import handle_tool_request
+from .models import ToolRequest
+from .main import handle_tool_request
 
 app = FastAPI(
     title="Secure MCP Server",
