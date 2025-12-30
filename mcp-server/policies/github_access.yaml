@@ -1,0 +1,9 @@
+policy_id: github_read_only
+
+rules:
+  - tool: list_repositories
+    action: allow
+
+  - tool: create_repository
+    action: deny
+    reason: "Write operations are forbidden for AI agents"
