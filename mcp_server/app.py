@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the mcp_server folder to sys.path
+sys.path.append(os.path.dirname(__file__))
+
 from fastapi import FastAPI, HTTPException
 from tools.models import ToolRequest
 from tools.main import handle_tool_request
