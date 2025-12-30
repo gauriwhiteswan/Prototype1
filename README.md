@@ -1,11 +1,9 @@
 ---
 title: Prototype1
-emoji: 🤖
-colorFrom: blue
-colorTo: purple
-sdk: python
-sdk_version: "3.10"
-app_file: app.py
+emoji: 🧠
+colorFrom: gray
+colorTo: black
+sdk: static
 pinned: false
 ---
 
