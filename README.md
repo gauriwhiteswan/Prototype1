@@ -1,3 +1,18 @@
+---
+title: Prototype1
+emoji: 🤖
+colorFrom: blue
+colorTo: purple
+sdk: python
+sdk_version: "3.10"
+app_file: app.py
+pinned: false
+---
+
+# Prototype1
+
+MCP-based security prototype with PEP/PDP enforcement.
+
 # Secure MCP Agent Integration
 
 This project demonstrates a **secure, policy-governed integration** between AI agents and enterprise tools using the Model Context Protocol (MCP).
