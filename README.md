@@ -3,7 +3,7 @@ title: Prototype1
 emoji: brain
 colorFrom: gray
 colorTo: black
-sdk: static
+sdk: docker
 pinned: false
 ---
 
