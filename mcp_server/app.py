@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from models import ToolRequest
+from .models import ToolRequest
 from main import handle_tool_request
 
 app = FastAPI(
