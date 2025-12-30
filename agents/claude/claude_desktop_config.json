@@ -1,0 +1,6 @@
+{
+  "agent_id": "claude-desktop",
+  "description": "Claude Desktop Agent with MCP access",
+  "capabilities": ["tool-use"],
+  "security_note": "This agent never receives raw credentials"
+}
