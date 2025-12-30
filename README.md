@@ -1,9 +1,9 @@
 ---
 title: Prototype1
-emoji: 🧠
+emoji: brain
 colorFrom: gray
 colorTo: black
-sdk: docker
+sdk: static
 pinned: false
 ---
 
