@@ -21,7 +21,7 @@ jobs:
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
 
-          git clone https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauriws/prototype1 hf-space
+          git clone https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauriws/Prototype1 hf-space
 
           rsync -av --exclude='.git' ./ hf-space/
 
