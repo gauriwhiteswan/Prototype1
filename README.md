@@ -1,8 +1,8 @@
 ---
 title: Prototype1
-emoji: brain
+emoji: 🧠
 colorFrom: gray
-colorTo: black
+colorTo: green
 sdk: docker
 pinned: false
 ---
