@@ -1,0 +1,12 @@
+{
+  "list_repositories": {
+    "category": "read",
+    "allowed_agents": ["claude-desktop"],
+    "parameters": ["org"]
+  },
+  "create_repository": {
+    "category": "write",
+    "allowed_agents": [],
+    "parameters": ["name"]
+  }
+}
