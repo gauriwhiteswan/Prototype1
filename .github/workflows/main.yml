@@ -19,10 +19,10 @@ jobs:
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
 
-          git clone https://huggingface.co/spaces/gauriws/prototype1 hf-space
+          git clone https://huggingface.co/spaces/gauriws/Prototype1 hf-space
           rsync -av --exclude='.git' ./ hf-space/
           cd hf-space
 
           git add .
           git commit -m "Deploy from GitHub" || echo "No changes"
-          git push https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauriws/prototype1 main
+          git push https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauriws/Prototype1 main
