@@ -3,7 +3,7 @@ title: Prototype1
 emoji: 🧠
 colorFrom: gray
 colorTo: black
-sdk: static
+sdk: docker
 pinned: false
 ---
 
