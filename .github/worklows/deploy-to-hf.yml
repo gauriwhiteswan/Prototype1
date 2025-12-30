@@ -1,0 +1,28 @@
+name: Deploy to Hugging Face Spaces
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "ci@github.com"
+          git config --global user.name "GitHub Actions"
+
+          git clone https://huggingface.co/spaces/gauriws/prototype1 hf-space
+          rsync -av --exclude='.git' ./ hf-space/
+          cd hf-space
+
+          git add .
+          git commit -m "Auto-deploy from GitHub" || echo "No changes"
+          git push https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauris/prototype1 main
