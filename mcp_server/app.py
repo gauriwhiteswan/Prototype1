@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
-from .tools.models import ToolRequest
-from main import handle_tool_request
+from tools.models import ToolRequest
+from tools.main import handle_tool_request
 
 app = FastAPI(
     title="Secure MCP Server",
