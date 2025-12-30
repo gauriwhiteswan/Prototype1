@@ -12,40 +12,21 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # important for force push
+          fetch-depth: 0
 
-      - name: Sync files to Hugging Face Space (force overwrite)
+      - name: Deploy to Hugging Face Space (Docker SDK)
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
 
-          # Clone the HF Space repo
-          git clone https://huggingface.co/spaces/gauriws/prototype1 hf-space
+          git clone https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauriws/prototype1 hf-space
 
-          # Copy all files from GitHub repo into HF repo, excluding its .git
           rsync -av --exclude='.git' ./ hf-space/
 
-          # Enter HF repo
           cd hf-space
-
-          # Ensure README has valid metadata (overwrite just in case)
-          cat > README.md << 'EOF'
-          ---
-          title: Prototype1
-          emoji: brain
-          colorFrom: gray
-          colorTo: black
-          sdk: static
-          pinned: false
-          ---
-          # Prototype1
-          Static portfolio prototype deployed from GitHub.
-          EOF
-
           git add .
-          git commit -m "Auto-deploy from GitHub (force overwrite)" || echo "No changes to commit"
+          git commit -m "Docker deploy from GitHub" || echo "No changes"
 
-          # Force push to the correct HF Space Git remote
-          git push https://gauriws:${HF_TOKEN}@huggingface.co/spaces/gauriws/prototype1 main --force
+          git push origin main --force
