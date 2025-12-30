@@ -1,5 +1,5 @@
-from pdp.policy_engine import evaluate_policy
-from contracts import tool_contracts
+from ..pdp.policy_engine import evaluate_policy
+from ..contracts import tool_contracts
 
 def enforce_policy(request):
     # 1. Validate tool exists
